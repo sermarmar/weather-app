@@ -2,7 +2,6 @@ import { MdOutlineMyLocation } from "react-icons/md"
 import { Button } from "../components/buttons/Button"
 
 export const SidebarLayout = () => {
-    let icon = MdOutlineMyLocation;
 
     return(
         <>
@@ -19,4 +18,5 @@ export const SidebarLayout = () => {
             </nav>
         </>
     )
+    
 }
