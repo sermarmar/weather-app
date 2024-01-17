@@ -1,5 +1,7 @@
 import { MdOutlineMyLocation } from "react-icons/md"
-import { Button } from "../components/buttons/Button"
+import { Button } from "../components/Button"
+import { weathers } from "../assets/json/weathers"
+import { Image } from "../components/Image"
 
 export const SidebarLayout = () => {
 
@@ -14,9 +16,13 @@ export const SidebarLayout = () => {
                     <Button theme="gray" icon={ MdOutlineMyLocation }></Button>
                     
                 </div>
+                <div className="my-44 px-10">
+                     <Image name={ weathers.sol.name } image={ weathers.sol.image }/>
+                </div>
                 
             </nav>
         </>
     )
-    
+
 }
+
