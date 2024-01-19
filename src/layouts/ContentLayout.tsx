@@ -1,8 +1,4 @@
-import Moment from "react-moment"
-import { weathers } from "../assets/json/weathers"
-import { Image } from "../components/atoms/Image"
 import { Header } from "../components/atoms/Text/Header"
-import { Paragrahp } from "../components/atoms/Text/Paragrahp"
 import { WeatherCard } from "../components/layouts/WeatherCard"
 
 export const ContentLayout = () => {
