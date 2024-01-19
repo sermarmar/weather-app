@@ -1,10 +1,10 @@
 import { MdLocationOn, MdOutlineMyLocation } from "react-icons/md"
-import { Button } from "../components/Button"
+import { Button } from "../components/atoms/Button"
 import { weathers } from "../assets/json/weathers"
-import { Image } from "../components/Image"
+import { Image } from "../components/atoms/Image"
 import Moment from "react-moment"
-import { Header } from "../components/Text/Header"
-import { Paragrahp } from "../components/Text/Paragrahp"
+import { Header } from "../components/atoms/Text/Header"
+import { Paragrahp } from "../components/atoms/Text/Paragrahp"
 
 export const SidebarLayout = () => {
 
@@ -21,19 +21,19 @@ export const SidebarLayout = () => {
                      <Image name={ weathers.sol.name } image={ weathers.sol.image }/>
                 </div>
                 <div className="flex flex-row justify-center items-center text-center mb-20">
-                    <Header>15</Header>
-                    <Paragrahp size="5">ºC</Paragrahp>
+                    <Header size="9">15</Header>
+                    <Paragrahp size="5" opacity>ºC</Paragrahp>
                 </div>
                 
                 <div className="mb-10">
                     <Paragrahp align="center" style="bold" size="2">{ weathers.sol.name.toUpperCase() }</Paragrahp>
                 </div>
                 <div className="mb-2">
-                    <Paragrahp align="center">Hoy - <Moment format="DD/MM/YYYY">{ todayDate }</Moment> </Paragrahp>
+                    <Paragrahp align="center" opacity>Hoy - <Moment format="DD/MM/YYYY">{ todayDate }</Moment> </Paragrahp>
                 </div>
                 <div className="flex flex-row justify-center items-center gap-2">
-                    <MdLocationOn className="text-2xl"/>
-                    <Paragrahp align="center">San Bartolomé de Pinares</Paragrahp>
+                    <MdLocationOn className="text-2xl opacity-70"/>
+                    <Paragrahp align="center" opacity>San Bartolomé de Pinares</Paragrahp>
                 </div>
             </aside>
         </>
