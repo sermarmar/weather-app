@@ -1,9 +1,9 @@
+import { weathers } from "@/assets/json/weathers"
 import Moment from "react-moment"
-import { Header } from "../atoms/Text/Header"
-import { Paragrahp } from "../atoms/Text/Paragrahp"
-import { Image } from "../atoms/Image"
-import { weathers } from "../../assets/json/weathers"
 import { Card } from "../atoms/Card"
+import { Image } from "../atoms/Image"
+import { Paragrahp } from "../atoms/Text/Paragrahp"
+import { FourthTitle } from "../atoms/Text/FourthTitle"
 
 interface Props {
     day: number
@@ -15,12 +15,12 @@ export const WeatherCard = (props: Props) => {
     let today = new Date()
 
     return (
-        <Card side={ 4 } medial={ 8 }>
+        <Card>
             <div className="text-center">
-                <Header size="2"><Moment format={ FORMAT_DATE } add={ {'days': props.day + 1} }>{ today }</Moment></Header>
+                <FourthTitle><Moment format={ FORMAT_DATE } add={ {'days': props.day + 1} }>{ today }</Moment></FourthTitle>
             </div>
             <div className="flex justify-center my-6">
-                <Image name={ weathers.nevando.name } image={ weathers.nevando.image } size="8/12"/> 
+                <Image name={ weathers.nevando.name } image={ weathers.nevando.image } size="medium"/> 
             </div>
             
             <div className="flex flex-row gap-8 justify-center">

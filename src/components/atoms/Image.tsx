@@ -1,13 +1,29 @@
 interface Props {
     name: string,
     image: string,
-    size?: 'auto' | string
+    size?: '' | 'big' | 'medium' | 'small'
 }
 
 export const Image = (props: Props) => {
 
     let loadImage = (image: string) => `/images/${image}`;
-    let classes = `w-${props.size}`
+    let size = ''
+    switch(props.size){
+        case 'big':
+            size = 'w-8/12'
+            break;
+        case 'medium':
+            size = 'w-6/12'
+            break;
+        case 'small':
+            size = 'w-2/12'
+            break;
+        default: 
+            size = 'w-auto'
+            break;
+    }
+
+    let classes = size
 
     return(
         <>

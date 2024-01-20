@@ -1,17 +1,15 @@
+import classNames from "classnames"
 import { ReactNode } from "react"
 
 interface Props {
     children: ReactNode
-    side?: number
-    medial?: number
+    fine?: boolean
 }
 
 export const Card = (props: Props) => {
-    
-    const side = `px-${props.side}`
-    const medial = `py-${props.medial}`
+    const frame = props.fine ? 'p-2' : 'px-4 py-8'
 
-    const classes = `w-auto bg-bluedark flex-col ${side} ${medial}`
+    const classes = classNames('w-auto bg-bluedark flex-col', frame)
 
     return (
         <div className={ classes }>

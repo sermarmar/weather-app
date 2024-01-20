@@ -1,10 +1,11 @@
+import { weathers } from "@/assets/json/weathers"
+import { Button } from "@/components/atoms/Button"
+import { Image } from "@/components/atoms/Image"
+import { Paragrahp } from "@/components/atoms/Text/Paragrahp"
+import { ThirdTitle } from "@/components/atoms/Text/ThirdTitle"
+import { Title } from "@/components/atoms/Text/Title"
 import { MdLocationOn, MdOutlineMyLocation } from "react-icons/md"
-import { Button } from "../components/atoms/Button"
-import { weathers } from "../assets/json/weathers"
-import { Image } from "../components/atoms/Image"
 import Moment from "react-moment"
-import { Header } from "../components/atoms/Text/Header"
-import { Paragrahp } from "../components/atoms/Text/Paragrahp"
 
 export const SidebarLayout = () => {
 
@@ -12,7 +13,7 @@ export const SidebarLayout = () => {
 
     return(
         <>
-            <aside className="flex flex-col bg-bluedark h-screen w-96 py-12 px-10">
+            <aside className="flex flex-col bg-bluedark overflow-hidden h-screen w-96 py-12 px-10 sticky top-0">
                 <div className="flex flex-row justify-between">
                     <Button theme="gray">Buscar un lugar</Button>
                     <Button theme="gray" icon={ MdOutlineMyLocation }></Button>                 
@@ -21,8 +22,8 @@ export const SidebarLayout = () => {
                      <Image name={ weathers.sol.name } image={ weathers.sol.image }/>
                 </div>
                 <div className="flex flex-row justify-center items-center text-center mb-20">
-                    <Header size="9">15</Header>
-                    <Paragrahp size="5" opacity>ºC</Paragrahp>
+                    <Title>15</Title>
+                    <ThirdTitle opacity>ºC</ThirdTitle>
                 </div>
                 
                 <div className="mb-10">
