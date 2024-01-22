@@ -3,6 +3,7 @@ import { IconType } from 'react-icons';
 
 interface Props {
     icon?: IconType
+    onClick?: (() => void) | undefined;
     children?: ReactNode
     theme?: "gray" | "blue"
     className?: string
@@ -10,12 +11,14 @@ interface Props {
 
 export const Button = (props: Props) => {
 
+    const { onClick, theme } = props;
+
     let classes = 'py-2 px-4'
 
     let colorButton = 'bg-white text-indigo-950'
-    if (props.theme == 'blue') {
+    if (theme == 'blue') {
         colorButton = 'bg-blue-600 text-white hover:bg-blue-500 active:bg-blue-700'
-    } else if(props.theme == 'gray') {
+    } else if(theme == 'gray') {
         colorButton = 'bg-gray-500 text-white hover:bg-gray-400 active:bg-gray-600'
     }
 
@@ -31,7 +34,7 @@ export const Button = (props: Props) => {
     return(
         <>
             <div>
-                <button className={ classes }>{ content }</button>
+                <button className={ classes } onClick={ onClick }>{ content }</button>
             </div>
         </>
     )
