@@ -2,17 +2,12 @@ export const InputSearch = () => {
 
     return(
         <div className="relative h-10 w-full min-w-[200px]">
-            {/* <input
-                className="peer h-full w-full border border-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-200 placeholder-shown:border-t-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-gray-50"
-                placeholder=" "/>
-            
-            <label className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-gray-200 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-gray-200 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-pink-500 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-pink-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-pink-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-gray-500">
+            {/* <input type="text" className="peer border h-full w-full border-gray-100 bg-transparent px-3 py-1.5 outline-none text-sm transition-all focus:border-2" placeholder=""/>
+            <label className="absolute left-0 -top-1 m-3.5 pointer-events-none transition-all  leading-tight peer-focus:-top-5 peer-focus:text-xs peer-placeholder-shown:left-3 peer-placeholder-shown:-top-5">
                 Localidad
             </label> */}
-            <input type="text" className="peer border h-full w-full border-gray-100 bg-transparent px-3 py-1.5 outline-none text-sm transition-all focus:border-2" placeholder=" "/>
-            <label className="absolute left-0 -top-1 m-3.5 pointer-events-none transition-all peer-focus:m-0 peer-focus:left-3 leading-tight peer-focus:-top-5 peer-focus:text-xs">
-                Localidad
-            </label>
+    {/* <input type="text" id="floating_outlined" className="block px-3 py-1.5 h-full w-full bg-transparent  border border-1 border-gray-100 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-2 transition-all" placeholder=" " />
+    <label htmlFor="floating_outlined" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">Floating outlined</label> */}
         </div>
     )
 }

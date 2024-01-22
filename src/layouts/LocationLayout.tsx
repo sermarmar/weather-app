@@ -16,8 +16,9 @@ export const LocationLayout = ({ status, action }: Props) => {
         setAnimationStatus(status);
     }, [status]);
 
-    let classes = classNames('flex flex-col gap-8 bg-bluedark-900 h-screen w-96 py-8 px-10 absolute transition-all duration-300 left-0', {
+    let classes = classNames('flex flex-col gap-8 bg-bluedark-900 overflow-hidden h-screen w-96 py-8 px-10 absolute top-0 transition-all duration-300 ', {
         '-left-96': !animationStatus,
+        'left-0': animationStatus
     });
     
     const handleClose = () => {
