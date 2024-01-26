@@ -8,7 +8,6 @@ import { useState } from "react"
 import { MdLocationOn, MdOutlineMyLocation } from "react-icons/md"
 import Moment from "react-moment"
 import { LocationLayout } from "./LocationLayout"
-import { FaLocationArrow } from "react-icons/fa"
 
 export const SidebarLayout = () => {
 

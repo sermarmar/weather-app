@@ -1,7 +1,7 @@
 import { Button } from "@/components/atoms/Button"
-import { InputSearch } from "@/components/atoms/Inputs/InputSearch"
+import { InputText } from "@/components/atoms/Inputs/InputText"
 import classNames from "classnames"
-import { useEffect, useState } from "react"
+import { FormEvent, useEffect, useState } from "react"
 import { IoMdClose } from "react-icons/io"
 
 interface Props{
@@ -10,7 +10,10 @@ interface Props{
 }
 
 export const LocationLayout = ({ status, action }: Props) => {
+    
     const [animationStatus, setAnimationStatus] = useState(status);
+    const [locations,  setLocations] = useState<string[]>([]);
+    const [location, setLocation] = useState('');
 
     useEffect(() => {
         setAnimationStatus(status);
@@ -22,20 +25,35 @@ export const LocationLayout = ({ status, action }: Props) => {
     });
     
     const handleClose = () => {
-        action(false)
+        action(false);
     };
+
+    const onSubmit = (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        setLocations( [location, ...locations] );
+        setLocation('');
+    }
 
     return(
         <>
-            <aside className={ classes }>
-                <div className="flex justify-end">
-                    <IoMdClose className="text-4xl" onClick={ handleClose }/>
-                </div>
-                <div className="flex flex-row gap-5 justify-between">
-                    <InputSearch/>
-                    <Button theme="blue">Buscar</Button>                 
-                </div>
-            </aside>
+            <form onSubmit={ (event) => onSubmit(event) }>
+                <aside className={ classes }>
+                    <div className="flex justify-end">
+                        <IoMdClose className="text-4xl" onClick={ handleClose }/>
+                    </div>
+                    <div className="flex flex-row gap-5 justify-between">
+                        <InputText label="Location" onChange={ setLocation } value={ location }/>
+                        <Button theme="blue">Buscar</Button>                 
+                    </div>
+                    <ul>
+                        {
+                            locations.sort().map(location => (
+                                <li>{ location }</li>
+                            ))
+                        }
+                    </ul>
+                </aside>
+            </form>
         </>
     )
 }
