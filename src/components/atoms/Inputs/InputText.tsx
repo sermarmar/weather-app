@@ -1,4 +1,3 @@
-import { ChangeEvent, useEffect, useState } from "react";
 
 interface Props{
     label: string;
