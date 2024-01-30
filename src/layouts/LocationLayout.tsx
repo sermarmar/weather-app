@@ -1,15 +1,17 @@
 import { Button } from "@/components/atoms/Button"
 import { InputText } from "@/components/atoms/Inputs/InputText"
+import { List } from "@/components/atoms/List"
 import classNames from "classnames"
 import { FormEvent, useEffect, useState } from "react"
 import { IoMdClose } from "react-icons/io"
 
 interface Props{
     status: boolean
+    addLocation: (value: string) => void
     action?: any
 }
 
-export const LocationLayout = ({ status, action }: Props) => {
+export const LocationLayout = ({ status, addLocation, action }: Props) => {
     
     const [animationStatus, setAnimationStatus] = useState(status);
     const [locations,  setLocations] = useState<string[]>([]);
@@ -34,6 +36,11 @@ export const LocationLayout = ({ status, action }: Props) => {
         setLocation('');
     }
 
+    const handleSelectLocation = (item: string) => {
+        addLocation(item);
+        action(false);
+    }
+
     return(
         <>
             <form onSubmit={ (event) => onSubmit(event) }>
@@ -45,13 +52,7 @@ export const LocationLayout = ({ status, action }: Props) => {
                         <InputText label="Location" onChange={ setLocation } value={ location }/>
                         <Button theme="blue">Buscar</Button>                 
                     </div>
-                    <ul>
-                        {
-                            locations.sort().map(location => (
-                                <li>{ location }</li>
-                            ))
-                        }
-                    </ul>
+                    <List items={ locations } handle={ handleSelectLocation }/>
                 </aside>
             </form>
         </>

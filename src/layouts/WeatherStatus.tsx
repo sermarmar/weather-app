@@ -1,8 +1,8 @@
 import { ThirdTitle } from "@/components/atoms/Text/ThirdTitle"
-import { AirPressureCard } from "@/components/layouts/weatherStatus/AirPressureCard"
-import { HumidityCard } from "@/components/layouts/weatherStatus/HumidityCard"
-import { VisibilityCard } from "@/components/layouts/weatherStatus/VisibilityCard"
-import { WindStatusCard } from "@/components/layouts/weatherStatus/WindStatusCard"
+import { AirPressureCard } from "@/components/templates/weatherStatus/AirPressureCard"
+import { HumidityCard } from "@/components/templates/weatherStatus/HumidityCard"
+import { VisibilityCard } from "@/components/templates/weatherStatus/VisibilityCard"
+import { WindStatusCard } from "@/components/templates/weatherStatus/WindStatusCard"
 
 export const WeatherStatus = () => {
     

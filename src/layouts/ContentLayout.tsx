@@ -1,4 +1,4 @@
-import { WeatherCard } from "@/components/layouts/WeatherCard"
+import { WeatherCard } from "@/components/templates/WeatherCard"
 import { WeatherStatus } from "./WeatherStatus"
 
 export const ContentLayout = () => {
