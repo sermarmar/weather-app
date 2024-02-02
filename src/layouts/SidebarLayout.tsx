@@ -4,10 +4,11 @@ import { Image } from "@/components/atoms/Image"
 import { Paragrahp } from "@/components/atoms/Text/Paragrahp"
 import { ThirdTitle } from "@/components/atoms/Text/ThirdTitle"
 import { Title } from "@/components/atoms/Text/Title"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { MdLocationOn, MdOutlineMyLocation } from "react-icons/md"
 import Moment from "react-moment"
 import { LocationLayout } from "./LocationLayout"
+import { GetLocation } from "@/helper/GetLocation"
 
 export const SidebarLayout = () => {
 
@@ -18,6 +19,14 @@ export const SidebarLayout = () => {
     const handleOpen = (opened: boolean) => {
         setOpen(opened)
     }
+
+    const getLocation = async() => {
+        await GetLocation();
+    }
+
+    useEffect(() => {
+      getLocation();
+    }, [location]);
 
     return(
         <>
