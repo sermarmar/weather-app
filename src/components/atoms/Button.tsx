@@ -38,7 +38,4 @@ export const Button = (props: Props) => {
             </div>
         </>
     )
-
-
-
 }

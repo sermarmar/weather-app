@@ -28,6 +28,10 @@ export const SidebarLayout = () => {
       getLocation();
     }, [location]);
 
+    const handleLocation = (location: string) => {
+        setLocation(location);
+    }
+
     return(
         <>
             <div className="grid grid-flow-col sticky top-0 overflow-hidden h-screen">
@@ -55,7 +59,7 @@ export const SidebarLayout = () => {
                         <Paragrahp align="center" opacity>{ location }</Paragrahp>
                     </div>
                 </aside>
-                <LocationLayout status={ open } action={ (value: boolean) => handleOpen(value) }/> 
+                <LocationLayout status={ open } action={ (value: boolean) => handleOpen(value) } addLocation={ handleLocation }/> 
             </div>
             
         </>
