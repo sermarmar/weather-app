@@ -1,7 +1,3 @@
-import { ReactNode } from 'react';
-import { IconType } from 'react-icons';
-import classNames from 'classnames';
-
 interface Props {
     items: any[];
     handle?: ((value: string) => void) | undefined;
